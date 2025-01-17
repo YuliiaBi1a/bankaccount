@@ -23,17 +23,17 @@ class SavingsAccount extends Account {
     public void deposit(float amount) {
         if (!active) {
             System.out.println("The account is inactive. Deposit not allowed.");
-            return; // Зупиняємо виконання, якщо рахунок неактивний
+            return;
         }
-        super.deposit(amount); // Викликаємо базовий метод
-        updateStatus(); // Оновлюємо статус після виконання
+        super.deposit(amount);
+        updateStatus();
     }
 
     @Override
     public void withdraw(float amount) {
         if (!active) {
             System.out.println("The account is inactive. Withdrawal not allowed.");
-            return; // Не дозволяємо виконувати зняття
+            return;
         }
         super.withdraw(amount);
         updateStatus();
